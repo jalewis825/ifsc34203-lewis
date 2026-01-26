@@ -1,0 +1,76 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  margin: 0;
+  padding: 32px;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  background-color: #3ca792;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+h1 {
+  margin-bottom: 12px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+}
+
+nav li {
+  margin: 6px 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+}
+
+.todo {
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.todo ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.todo input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.todo input[type="checkbox"]:checked {
+  accent-color: #0777F7;
+}
+
+.todo li:has(input:checked) {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: azure;
+}
+
+/*ChatGPT helped me with the checkboxes and line through*/
