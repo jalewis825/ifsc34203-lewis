@@ -1,41 +1,138 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8"><!--Declares the character set-->
-<meta name="description" content="This is a skills pre-assessment for Mobile Web Development" />
-<meta name="author" content="Jessi Lewis"/>
-<title>IFSC 34203 Pre-Assessment | Jessi Lewis</title>
-<link rel="stylesheet" href="assets/css/screen.css">
-</head>
-<body>
-<div id="container">
-  <div id="header">
-    <h1><a href="index.html">Jessi Lewism</a></h1>
-  </div>
-  <div id="nav">
-    <ul>
-      <li><a href="http://ualr.edu">UALR</a></li>
-      <li><a href="https://thomaswallace.net/course/mobile-web/spring-2018/">Course Homepage</a></li>
-      <li><a href="http://www.w3.org/">W3C</a></li>
-    </ul>
-  </div>
-  <div id="content">
-    <h2>My Assessment</h2>
-    <p>The most important goal of effective communication is clarity. Clarity is not the same as simplicity . Often, simple things are clear if the message is intended to be brief and small, but often the message is about a complex relationship that can only be presented with a necessarily large amount of data. </p>
-    <p>This complexity can be made to appear clear by effective organization and presentation and need not be reduced to meaningless "bite-sized" chunks of data, as simplification usually does. </p>
-    <p>Clarity refers to the focus on one particular message or goal at a time, rather than attempting to accomplish too much at once. Simplicity is often responsible for the "dumbing" of information rather than the illumination of it.</p>
-    <h3>Questions</h3>
-    <p>Please answer the following questions below. Remember to markup the information properly using HTML</p>
-    <h4>Explain the difference between the &quot;alt&quot; attribute and the &quot;title&quot; attribute. </h4>
-    <p>Answer goes here...</p>
-    <h4>Please provide an example below of how to mark up a definition from the dictionary</h4>
-    <p>Answer goes here...</p>
-    <h4>Provide an example of link pointing to your favorite site &amp; create a style rule to change the background color of the link when the user hovers over it. </h4>
-    <p>Answer goes here... </p>
-  </div>
-  <div id="footer">
-    <h6>Footer</h6>
-  </div>
-</div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <!--Declares the character set-->
+    <meta
+      name="description"
+      content="This is a skills pre-assessment for Mobile Web Development"
+    />
+    <meta name="author" content="Jessi Lewis" />
+    <title>IFSC 34203 Pre-Assessment | Jessi Lewis</title>
+    <link rel="stylesheet" href="assets/css/screen.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">
+        <h1><a href="../index.html">Jessi Lewis</a></h1>
+      </div>
+      <div id="nav">
+        <ul>
+          <li>
+            <a href="http://ualr.edu" title="Visit UALR Homepage">UALR</a>
+          </li>
+          <li>
+            <a
+              href="https://thomaswallace.net/course/mobile-web/spring-2018/"
+              title="View the Mobile Web Development Course Page"
+              >Course Homepage</a
+            >
+          </li>
+          <li>
+            <a
+              href="http://www.w3.org/"
+              title="Visit the World Wide Web Consortium (W3C)"
+              >W3C</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.metroems.org/"
+              title="Visit Metropolitan Emergency Medical Services (MEMS) website"
+              >MEMS</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div id="content">
+        <h2>My Assessment</h2>
+        <!--Hey Thomas!-->
+        <p>
+          The most important goal of effective communication is clarity. Clarity
+          is not the same as simplicity . Often, simple things are clear if the
+          message is intended to be brief and small, but often the message is
+          about a complex relationship that can only be presented with a
+          necessarily large amount of data.
+        </p>
+        <p class="alert">
+          This complexity can be made to appear clear by effective organization
+          and presentation and need not be reduced to meaningless "bite-sized"
+          chunks of data, as simplification usually does.
+        </p>
+        <p>
+          Clarity refers to the focus on one particular message or goal at a
+          time, rather than attempting to accomplish too much at once.
+          Simplicity is often responsible for the "dumbing" of information
+          rather than the illumination of it.
+        </p>
+        <h3>Questions</h3>
+        <p>
+          Please answer the following questions below. Remember to markup the
+          information properly using HTML
+        </p>
+        <h4>
+          Explain the difference between the &quot;alt&quot; attribute and the
+          &quot;title&quot; attribute.
+        </h4>
+        <figure class="content-image">
+          <img
+            src="assets/img/content-image2.jpg"
+            alt="A bearded man in a suit holding a beer, with meme text about not always using responsive design but doing so for mobile visitors."
+          />
+          <figcaption>
+            Meme emphasizing the importance of responsive design for mobile
+            users.
+          </figcaption>
+        </figure>
+        <p class="answer">
+          The alt attribute provides alternate text for an image when the image
+          cannot be displayed and is used by screen readers to describe the
+          image to users who rely on assistive technology.
+        </p>
+
+        <p class="answer">
+          The title attribute provides additional information about an element,
+          ususally displayed when a user hovers over it with the mouse.
+        </p>
+        <h4>
+          Please provide an example below of how to mark up a definition from
+          the dictionary
+        </h4>
+        <dl class="answer">
+          <dt>Peregrinate</dt>
+          <dd class="definition">- to travel or wonder from place to place</dd>
+          <dd class="example">
+            Example: In web design, users peregrinate through a website as they
+            move between pages, menus, and content.
+          </dd>
+          <dt>Hierarchy</dt>
+          <dd class="definition">
+            - a system in which elements are ranked or organized according to
+            importanct.
+          </dd>
+          <dd class="example">
+            Example: In web design, visual hierarchy uses size, color, spacing
+            and placement to signal what matters most.
+          </dd>
+        </dl>
+        <h4>
+          Provide an example of link pointing to your favorite site &amp; create
+          a style rule to change the background color of the link when the user
+          hovers over it.
+        </h4>
+        <a href="https://goblin.tools/" class="favorite-link" target="_blank"
+          >Goblin Tools</a
+        >
+      </div>
+      <div id="footer">
+        <h5>&copy; 2026 Jessi Lewis</h5>
+        <a href="#top">Back to top</a>
+        <a href="assets/img/html-validation.png" target="_blank"
+          >HTML Validation</a
+        >
+      </div>
+    </div>
+  </body>
 </html>
+
+<!--ChatGPT used to generate random definitions with examples for the definiton list. Also used to help remember how to put an image into content area.-->
