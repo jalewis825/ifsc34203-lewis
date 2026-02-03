@@ -174,9 +174,9 @@ body {
 }
 
 .content-image figcaption {
-  font-size: 0.9rem;
-  margin-top: 6px;
-  color: azure;
+  font-size: 0.5rem;
+  color: #000;
+  font-style: italic;
 }
 
 /*Used ChatGPT to help brainstorm different style ideas that I could use in CSS. Also, used to recall HTML & CSS syntax. Also, used to help with floating the image. I couldn't remember how to get it where I wanted it.*/
