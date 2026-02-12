@@ -2,7 +2,6 @@
   margin: 0px;
   padding: 0px;
 }
-
 body {
   margin: 0;
   padding: 32px;
@@ -11,15 +10,19 @@ body {
   font-size: 16px;
   line-height: 1.5em;
 }
+main {
+  margin: 20px auto;
+  border: 1px solid #000;
+}
 
-h1 {
-  margin-bottom: 12px;
+h1, h2{
+  margin:20px;
 }
 
 nav ul {
   list-style: none;
   padding: 0;
-  margin: 0 0 32px;
+  margin: 20px;
 }
 
 nav li {
@@ -32,10 +35,11 @@ nav a {
 }
 
 .todo {
-  max-width: 400px;
+  width: 353px;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
+  margin: 20px;
 }
 
 .todo ul {
@@ -57,7 +61,7 @@ nav a {
 }
 
 .todo input[type="checkbox"]:checked {
-  accent-color: #0777F7;
+  accent-color: #0777f7;
 }
 
 .todo li:has(input:checked) {
