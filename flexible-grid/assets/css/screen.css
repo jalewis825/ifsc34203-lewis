@@ -21,6 +21,7 @@ html {
 
 main {
   /*background-image: url(../img/grid.png);*/
+  /*width: 1140px*/
   width: 80vw;
   margin: 20px auto;
   border: 1px solid #000;
