@@ -13,68 +13,90 @@ body {
 main {
   margin: 20px auto;
   border: 1px solid #000;
+  display: grid;
 }
 
-h1, h2{
-  margin:20px;
+h1 {
+  margin: 20px;
 }
 
 nav ul {
-  list-style: none;
-  padding: 0;
   margin: 20px;
 }
 
-nav li {
-  margin: 6px 0;
-}
-
-nav a {
-  text-decoration: none;
-  color: #000;
-}
-
-.todo {
-  width: 353px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  margin: 20px;
-}
-
-.todo ul {
-  list-style: none;
-  padding: 0;
+nav.primary ul li a,
+.dropdown-toggle {
+  color: #ffffff;
+  border: 2px solid #08f5ddd6;
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  transition: 0.4s;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
   margin: 0;
-}
-
-.todo li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin: 8px 0;
+  box-sizing: border-box;
   font-size: 16px;
+  line-height: 1.5;
 }
 
-.todo input[type="checkbox"] {
+nav.primary ul li a:hover,
+.dropdown-toggle:hover {
+  background-color: rgba(0, 140, 127, 0.4);
+}
+
+.dropdown-toggle:hover {
   cursor: pointer;
 }
 
-.todo input[type="checkbox"]:checked {
-  accent-color: #0777f7;
+.dropdown {
+  position: relative;
+  display: block;
+  width: 100%;
 }
 
-.todo li:has(input:checked) {
-  text-decoration: line-through;
-  opacity: 0.6;
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 1);
+  z-index: 10;
+  border-radius: 15px;
+  left: 50%;
+  transform: translate(-50%);
+  width: max-content;
+  max-width: 90vw;
+  min-width: 200px;
+  text-align: center;
+  
 }
 
-a:hover {
-  text-decoration: underline;
+.dropdown:hover > .dropdown-content,
+.dropdown:focus-within > .dropdown-content {
+  display: block;
 }
 
-a:visited {
-  color: azure;
+.dropdown.nested > .dropdown-content {
+  display: none;
+  position: relative;
+  left: 0;
+  transform: none;
+  width: 100%;
 }
 
-/*ChatGPT helped me with the checkboxes and line through*/
+.dropdown.nested:hover > .dropdown-content,
+.dropdown.nested:focus-within > .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  text-decoration: none;
+  display: block;
+  padding: 7.5px 10px;
+  color: #ffffff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+/*ChatGPT helped me with getting the nested list to display properly*/

@@ -11,35 +11,46 @@
     <link rel="stylesheet" href="assets/css/screen.css" />
   </head>
   <body>
-  <main class="container cf">
-    <header class="primary">
-      <h1>Jessi Lewis</h1>
-      <h2>IFSC 34203 Assignments</h2>
-      <nav class="primary">
-        <ul>
-        <li><a href="pre-assessment/index.html">Pre-Asseessment</a></li>
-        <li><a href="html5-refactor/index.html">HTML5 Refactor</a></li>
-        <li><a href="flexible-grid/index.html">Flexible Grid - Floats</a></li>
-        <li><a href="css-grid-exercise-1/index.html">Flexible Grid - CSS Grid</a></li>
-        <li><a href= "css-grid-lab/">CSS Grid Lab</a></li>
+    <main class="container cf">
+      <header class="primary">
+        <h1>Jessi Lewis</h1>
+        <nav class="primary">
           <ul>
-            <li><a href="css-grid-lab/grid-two-col-equal.html"">Two Column Equal</a></li>
-            <li><a href="css-grid-lab/grid-two-col-left.html"">Two Column Left</a></li>
-            <li><a href="css-grid-lab/grid-two-col-right.html"">Two Column Right</a></li>
-            <li><a href="css-grid-lab/grid-two-col-stacked.html"">Two Column Stacked</a></li>
+            <li class="dropdown">
+              <button class="dropdown-toggle" type="button">IFSC 34203 Assignments</button>
+              <div class="dropdown-content">
+                <a href="pre-assessment/index.html">Pre-Asseessment</a>
+                <a href="html5-refactor/index.html">HTML5 Refactor</a>
+                <a href="flexible-grid/index.html">Flexible Grid - Floats</a>
+                <a href="css-grid-exercise-1/index.html"
+                  >Flexible Grid - CSS Grid</a
+                >
+
+                <div class="dropdown nested">
+                  <button class="dropdown-toggle" type="button">
+                    CSS Grid Lab
+                  </button>
+                  <div class="dropdown-content">
+                    <a href="css-grid-lab/grid-two-col-equal.html"
+                      >Two Column Equal</a
+                    >
+                    <a href="css-grid-lab/grid-two-col-left.html"
+                      >Two Column Left</a
+                    >
+                    <a href="css-grid-lab/grid-two-col-right.html"
+                      >Two Column Right</a
+                    >
+                    <a href="css-grid-lab/grid-two-col-stacked.html"
+                      >Two Column Stacked</a
+                    >
+                  </div><!--dropdown-content-->
+                </div><!--dropdown nested-->
+              </div><!--dropdown-content-->
+            </li>
+            <!--<li>Next Assignment Here</li>-->
           </ul>
-        <!--<li>Next Assignment Here</li>-->
-      </ul>
-    </nav>
-    </header>  
-    <div class="todo">
-      <ul>
-        <li><input type="checkbox" checked /> Pre-Assessment</li>
-        <li><input type="checkbox" checked /> Make Homepage</li>
-        <li><input type="checkbox" /> Make it pretty</li>
-        <li><input type="checkbox" /> Panic</li>
-      </ul>
-    </div>
+        </nav>
+      </header>
     </main>
   </body>
 </html>
