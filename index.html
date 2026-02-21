@@ -11,46 +11,53 @@
     <link rel="stylesheet" href="assets/css/screen.css" />
   </head>
   <body>
-    <main class="container cf">
+    <main class="container">
       <header class="primary">
-        <h1>Jessi Lewis</h1>
+        <div class="branding">
+          <h1>Jessi Lewis</h1>
+          <p class="subtitle"> IFSC 34203 | Mobile Web Development | Spring 2026</p>
+        </div>
         <nav class="primary">
-          <ul>
-            <li class="dropdown">
-              <button class="dropdown-toggle" type="button">IFSC 34203 Assignments</button>
-              <div class="dropdown-content">
-                <a href="pre-assessment/index.html">Pre-Asseessment</a>
-                <a href="html5-refactor/index.html">HTML5 Refactor</a>
-                <a href="flexible-grid/index.html">Flexible Grid - Floats</a>
-                <a href="css-grid-exercise-1/index.html"
-                  >Flexible Grid - CSS Grid</a
-                >
-
-                <div class="dropdown nested">
-                  <button class="dropdown-toggle" type="button">
-                    CSS Grid Lab
-                  </button>
-                  <div class="dropdown-content">
-                    <a href="css-grid-lab/grid-two-col-equal.html"
-                      >Two Column Equal</a
-                    >
-                    <a href="css-grid-lab/grid-two-col-left.html"
-                      >Two Column Left</a
-                    >
-                    <a href="css-grid-lab/grid-two-col-right.html"
-                      >Two Column Right</a
-                    >
-                    <a href="css-grid-lab/grid-two-col-stacked.html"
-                      >Two Column Stacked</a
-                    >
-                  </div><!--dropdown-content-->
-                </div><!--dropdown nested-->
-              </div><!--dropdown-content-->
+          <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><button class="dropdown" type="button">Assignments</button>
+              <ul class="nested">
+               <li><a href="pre-assessment/index.html">Pre-Assessment</a></li>
+               <li><a href="html5-refactor/index.html">HTML5 Refactor</a></li>
+               <li><button class="dropdown" type="button">Flexible Grid</button>
+              <ul class="nested">
+                <li><a href="flexible-grid/index.html">Floats</a></li>
+                <li><a href="css-grid-exercise-1/index.html">CSS Grid</a></li>
+              </ul>
+              </li>
+               <li><button class="dropdown" type="button">CSS Grid Lab</button>
+               <ul class="nested">
+                <li><a href="css-grid-lab/grid-two-col-equal.html">Two Column Equal</a></li>
+                <li><a href="css-grid-lab/grid-two-col-left.html">Two Column Left</a></li>
+                <li><a href="css-grid-lab/grid-two-col-right.html">Two Column Right</a></li>
+                <li><a href="css-grid-lab/grid-two-col-stacked.html">Two Column Stacked</a></li>
+               </ul>
+               </li>
+              </ul>
+              </li>
+            <li><button class="dropdown" type="button">Resources</button>
+            <ul class="nested">
+              <li><a href="https://thomaswallace.net/course/mobile-web/spring-2026/" target="_blank">Course Homepage</a></li>
+              <li><a href="https://gridbyexample.com/examples/" target="_blank">Grid by Examples</a></li>
+              <li><a href="https://cssgridgarden.com/" target="_blank">CSS Grid Garden</a></li>
+              <li><a href="https://validator.w3.org/" target="_blank">Validator</a></li>
+            </ul>
             </li>
-            <!--<li>Next Assignment Here</li>-->
           </ul>
         </nav>
       </header>
+      <!--<figure class="content-image">
+          <img
+            src="assets/img/css-grid-garden.png"
+            alt="Screenshot of the Grid Garden CSS game showing Level 28 completed. A large stack of carrots sits on a brown grid layout, with a congratulatory message and links to Flexbox Froggy and other coding games."
+          />
+          <figcaption>CSS Grid Garden </figcaption>
+      </figure>-->
     </main>
   </body>
 </html>
