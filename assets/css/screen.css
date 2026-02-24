@@ -6,6 +6,7 @@
 html {
   box-sizing: border-box;
 }
+
 *,
 *::before,
 *::after {
@@ -33,17 +34,35 @@ h1 {
   color: #ffffff;
   padding: 20px;
 }
+.site-title{
+  color:#ffffff;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.site-title:hover,
+.site-title:focus {
+  color: #08f5ddd6;
+  opacity: .8;
+}
 
 .subtitle {
   margin-top: 0.25rem;
   font-size: 0.95rem;
   color: #ffffff;
   padding: 0 0 10px 20px;
+  text-decoration: none;
+}
+
+.subtitle:hover,
+.subtitle:focus {
+  color: #08f5ddd6;
+  opacity: .8;
 }
 
 .nav {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   align-items: start;
 }
@@ -162,6 +181,7 @@ nav ul {
   transform: translateX(-50%);
 }
 
+/* ----- Media Queries ----- */
 
 @media screen and (max-width: 600px) {
   .nav {
@@ -193,4 +213,6 @@ nav ul {
     background-color:  rgba(0, 0, 0, 0.4);
   }
 }
+
+/* ----- AI Statement ----- */
 /*ChatGPT helped me with getting the nested list to display properly*/
