@@ -184,6 +184,19 @@ nav ul {
 /* ----- Media Queries ----- */
 
 @media screen and (max-width: 600px) {
+  .branding{
+    text-align: center;
+  }
+
+  h1{
+    padding: 20px 0 5px 0;
+  }
+
+  .subtitle{
+    padding:0;
+    display: block;
+  }
+  
   .nav {
     grid-template-columns: 1fr;
   }
