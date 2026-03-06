@@ -11,256 +11,314 @@
     <title>Jessi Lewis | Resume</title>
     <link rel="stylesheet" href="assets/css/screen.css" />
   </head>
-  <header class="container" id="top">
-    <!-- Main navigation -->
-    <nav class="primary">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Main -->
-  <main itemscope itemtype="https://schema.org/Person" class="container">
-    <h1 class="page-title" itemprop="name">Jessi Lewis</h1>
-
-    <section id="about">
-      <h2 class="visuallyhidden">Personal Details</h2>
-
-      <div class="bio">
-        <img itemprop="image" src="assets/img/headshot.webp" alt="Your Name" />
-        <p itemprop="description">
-          I am a Computer Science major at UALR with strong interests in
-          software development and GIS technologies. My 10 years of service in
-          the Army National Guard, along with a 9-year career in emergency
-          medical services, strengthened my leadership, communication, and
-          problem-solving abilities in high-pressure environments. I am
-          passionate about creating practical, real-world solutions that improve
-          systems and serve communities through technology.
-        </p>
-      </div>
-
-      <dl class="details">
-        <dt>Name</dt>
-        <dd itemprop="name">
-          <span itemprop="givenName">Jessi</span>
-          <span itemprop="familyName">Lewis</span>
-        </dd>
-
-        <dt>Date of birth</dt>
-        <dd>
-          <time itemprop="birthDate" datetime="1991-08-25">25 August 1991</time>
-        </dd>
-
-        <dt>Nationality</dt>
-        <dd itemprop="nationality">United States</dd>
-
-        <dt>Location</dt>
-        <!-- Keep original text, but model as Place for better schema correctness -->
-        <dd
-          itemprop="homeLocation"
-          itemscope
-          itemtype="https://schema.org/Place"
-        >
-          <span itemprop="name">Arkansas</span>
-        </dd>
-
-        <dt>Telephone</dt>
-        <dd>
-          <!-- tel: should be digits; keep visible text as-is -->
-          <a itemprop="telephone" href="tel:5017651340">555.555.555.5555</a>
-        </dd>
-
-        <dt>Email</dt>
-        <dd>
-          <a itemprop="email" href="mailto:jalewis3@ualr.edu"
-            >jalewis3@ualr.edu</a
+  <body>
+    <header class="container" id="top">
+      <!-- Main navigation -->
+      <nav class="primary">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Main -->
+    <main itemscope itemtype="https://schema.org/Person" class="container">
+      <h1 class="page-title" itemprop="name">Jessi Lewis</h1>
+      <section id="about">
+        <h2 class="visuallyhidden">Personal Details</h2>
+        <div class="bio">
+          <img
+            itemprop="image"
+            src="assets/img/headshot.webp"
+            alt="Jessi Lewis Headshot"
+          />
+          <p itemprop="description">
+            I am a Computer Science major at UALR with strong interests in
+            software development and GIS technologies. My 10 years of service in
+            the Army National Guard, along with a 9-year career in emergency
+            medical services, strengthened my leadership, communication, and
+            problem-solving abilities in high-pressure environments. I am
+            passionate about creating practical, real-world solutions that
+            improve systems and serve communities through technology.
+          </p>
+        </div>
+        <dl class="details">
+          <dt>Name</dt>
+          <dd itemprop="name">
+            <span itemprop="givenName">Jessi</span>
+            <span itemprop="familyName">Lewis</span>
+          </dd>
+          <dt>Date of birth</dt>
+          <dd>
+            <time itemprop="birthDate" datetime="1991-08-25"
+              >25 August 1991</time
+            >
+          </dd>
+          <dt>Nationality</dt>
+          <dd itemprop="nationality">United States</dd>
+          <dt>Location</dt>
+          <!-- Keep original text, but model as Place for better schema correctness -->
+          <dd
+            itemprop="homeLocation"
+            itemscope
+            itemtype="https://schema.org/Place"
           >
-        </dd>
-
-        <dt>Address</dt>
-        <dd
-          itemprop="address"
-          itemscope
-          itemtype="https://schema.org/PostalAddress"
-        >
-          <span itemprop="streetAddress">1808 Russenberger Rd</span>
-          <span itemprop="addressLocality">Little Rock</span>
-          <span itemprop="postalCode">72206</span>
-          <span itemprop="addressCountry">USA</span>
-        </dd>
-      </dl>
-
-      <ul class="related-links">
-        <li>
-          <a itemprop="sameAs" rel="me" href="https://github.com/jalewis825">
-            github</a
+            <span itemprop="name">Arkansas</span>
+          </dd>
+          <dt>Telephone</dt>
+          <dd>
+            <!-- tel: should be digits; keep visible text as-is -->
+            <a itemprop="telephone" href="tel:5017651340">555.555.555.5555</a>
+          </dd>
+          <dt>Email</dt>
+          <dd>
+            <a itemprop="email" href="mailto:jalewis3@ualr.edu"
+              >jalewis3@ualr.edu</a
+            >
+          </dd>
+          <dt>Address</dt>
+          <dd
+            itemprop="address"
+            itemscope
+            itemtype="https://schema.org/PostalAddress"
           >
-        </li>
-        <li>
-          <a itemprop="sameAs" rel="me" href="http://linkedin.com/profile"
-            >linkedin</a
+            <span itemprop="streetAddress">1808 Russenberger Rd</span>
+            <span itemprop="addressLocality">Little Rock</span>
+            <span itemprop="postalCode">72206</span>
+            <span itemprop="addressCountry">USA</span>
+          </dd>
+        </dl>
+        <ul class="related-links">
+          <li>
+            <a itemprop="sameAs" rel="me" href="https://github.com/jalewis825">
+              github</a
+            >
+          </li>
+          <li>
+            <a itemprop="sameAs" rel="me" href="http://linkedin.com/profile"
+              >linkedin</a
+            >
+          </li>
+          <li>
+            <a itemprop="url" href="assets/resources/resume.pdf" download
+              >pdf resume</a
+            >
+          </li>
+        </ul>
+      </section>
+      <section id="skills">
+        <h2>Skills</h2>
+        <ul class="skills-grid">
+          <li class="skill" itemprop="knowsAbout">HTML</li>
+          <li class="skill" itemprop="knowsAbout">CSS</li>
+          <li class="skill" itemprop="knowsAbout">C++</li>
+          <li class="skill" itemprop="knowsAbout">GIS</li>
+        </ul>
+      </section>
+      <section id="experience">
+        <h2>Experience</h2>
+
+        <!-- current job -->
+        <article class="job">
+          <!-- jobTitle is valid on Person; this is still within Person scope -->
+          <h3 itemprop="jobTitle">Communications Supervisor | EMT | EMD</h3>
+
+          <!-- worksFor is valid on Person -->
+          <div
+            itemprop="worksFor"
+            itemscope
+            itemtype="https://schema.org/Organization"
           >
-        </li>
-        <li>
-          <a itemprop="url" href="assets/resources/resume.pdf" download
-            >pdf resume</a
+            <span itemprop="name" class="visuallyhidden"
+              >Metropolitan Emergency Medical Services</span
+            >
+            <span
+              itemprop="location"
+              itemscope
+              itemtype="https://schema.org/Place"
+            >
+              <a itemprop="url" href="https://www.metroems.org/" target="_blank"
+                >Metropolitan Emergency Medical Services</a
+              >
+              <span
+                itemprop="address"
+                itemscope
+                itemtype="https://schema.org/PostalAddress"
+              >
+                <span itemprop="addressLocality">Little Rock, AR, USA</span>
+              </span>
+            </span>
+            <span>February 2017 - Present</span>
+
+            <p itemprop="description">
+              In a supervisory role, I received and prioritized emergency and
+              nonemergency calls, effectively dispatched EMS units while
+              supervising a busy 911 system utilizing real time data. I also
+              trained and supervised a team of dispatchers, enforced company
+              policies, evaluated staff performance for efficient operations and
+              provided coaching to address inefficiencies.
+            </p>
+          </div>
+        </article>
+
+        <!-- Previous Jobs -->
+        <article class="job">
+          <h3 itemprop="jobTitle">
+            Heavy Equipment Operator | Sergeant | Squad Leader
+          </h3>
+          <span
+            itemprop="worksFor"
+            itemscope
+            itemtype="https://schema.org/Organization"
           >
-        </li>
-      </ul>
-    </section>
+            <span itemprop="name" class="visuallyhidden">U.S. Army</span>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul class="skills-grid">
-        <li class="skill" itemprop="knowsAbout"><span class="icon" aria-hidden="true"></span>HTML</li>
-        <li class="skill" itemprop="knowsAbout"><span class="icon" aria-hidden="true"></span>Css</li>
-        <li class="skill" itemprop="knowsAbout"><span class="icon" aria-hidden="true"></span>C++</li>
-        <li class="skill" itemprop="knowsAbout"><span class="icon" aria-hidden="true"></span>GIS</li>
-      </ul>
-    </section>
+            <span
+              itemprop="location"
+              itemscope
+              itemtype="https://schema.org/Place"
+            >
+              <a itemprop="url" href="https://www.goarmy.com/" target="_blank"
+                >U.S. Army</a
+              >
+              <span
+                itemprop="address"
+                itemscope
+                itemtype="https://schema.org/PostalAddress"
+              >
+                <span itemprop="addressLocality"
+                  >North Little Rock, AR, USA</span
+                >
+              </span>
+            </span>
+          </span>
 
-    <section id="experience">
-      <h2>Experience</h2>
-
-      <!-- current job -->
-      <article class="job">
-        <!-- jobTitle is valid on Person; this is still within Person scope -->
-        <h3 itemprop="jobTitle">Lead Web Developer</h3>
-
-        <!-- worksFor is valid on Person -->
-        <div
-          itemprop="worksFor"
-          itemscope
-          itemtype="https://schema.org/Organization"
-        >
-          <span itemprop="name">Company Name 1</span>
-          <span>February 2010 - Present</span>
+          <!-- Keep original visible date format; Google won't bind it perfectly, but it won't warn -->
+          <div>
+            <span>September 2009</span> -
+            <span>September 2019</span>
+          </div>
 
           <p itemprop="description">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit...
+            While deployed to Kuwait, I efficiently managed a 6-member
+            construction squad, overseeing property and equipment inventory,
+            crew assignments, and providing thorough reports to superiors on
+            squad activities, including readiness and equipment status.
+            Additionally, I received training in conflict resolution, rated job
+            performance for 6 subordinates, upheld Army dress and appearance
+            regulations, and served as a designated mandatory reporter for
+            sexual assault and a responder for suicide prevention situations.
           </p>
+        </article>
+
+        <article class="job">
+          <h3 itemprop="jobTitle">Ground Line Technician</h3>
 
           <span
-            itemprop="location"
+            itemprop="worksFor"
             itemscope
-            itemtype="https://schema.org/Place"
+            itemtype="https://schema.org/Organization"
           >
-            <a itemprop="url" href="http://link-to-company.com">Company URL</a>
+            <span itemprop="name" class="visuallyhidden">TRC Consulting</span>
+
             <span
-              itemprop="address"
+              itemprop="location"
               itemscope
-              itemtype="https://schema.org/PostalAddress"
+              itemtype="https://schema.org/Place"
             >
-              <span itemprop="addressLocality">Anywhere,USA</span>
+              <a
+                itemprop="url"
+                href="https://www.trccompanies.com/"
+                target="_blank"
+                >TRC Consulting</a
+              >
+              <span
+                itemprop="address"
+                itemscope
+                itemtype="https://schema.org/PostalAddress"
+              >
+                <span itemprop="addressLocality">Jacksonville, AR, USA</span>
+              </span>
             </span>
           </span>
-        </div>
-      </article>
 
-      <!-- Previous Jobs -->
-      <article class="job">
-        <h3 itemprop="jobTitle">Senior Developer</h3>
+          <div>
+            <span>April 2012</span> -
+            <span>February 2017</span>
+          </div>
 
-        <span
-          itemprop="worksFor"
+          <p itemprop="description">
+            I inspected and treated over 50 utility poles daily to prevent decay
+            and damage, saving 8 poles from complete replacement per day.
+            Additionally, I efficiently operated equipment, documented findings,
+            communicated with team members, engaged with customers
+            professionally, and executed tasks within time and budget
+            constraints.
+          </p>
+        </article>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+
+        <article
+          class="certificate"
+          itemprop="alumniOf"
           itemscope
-          itemtype="https://schema.org/Organization"
+          itemtype="https://schema.org/EducationalOrganization"
         >
-          <span itemprop="name">Company Name 2</span>
+          <h3 itemprop="description">
+            <abbr title="Bachelor of Science">BS</abbr> Computer Science, Minor
+            in Geography
+          </h3>
+          <span itemprop="name">University of Arkansas at Little Rock</span>
+          <span itemprop="location" itemscope>Little Rock, AR, USA, </span>
+          <span>Expected 2027</span>
+        </article>
 
-          <span
-            itemprop="location"
-            itemscope
-            itemtype="https://schema.org/Place"
-          >
-            <a itemprop="url" href="http://link-to-company.com">Company URL</a>
-            <span
-              itemprop="address"
-              itemscope
-              itemtype="https://schema.org/PostalAddress"
-            >
-              <span itemprop="addressLocality">Anywhere,USA</span>
-            </span>
-          </span>
-        </span>
-
-        <!-- Keep original visible date format; Google won't bind it perfectly, but it won't warn -->
-        <div>
-          <span>February 2006</span> -
-          <span>February 2009</span>
-        </div>
-
-        <p itemprop="description">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit...
-        </p>
-      </article>
-
-      <article class="job">
-        <h3 itemprop="jobTitle">Senior Developer</h3>
-
-        <span
-          itemprop="worksFor"
+        <article
+          class="certificate"
+          itemprop="alumniOf"
           itemscope
-          itemtype="https://schema.org/Organization"
+          itemtype="https://schema.org/EducationalOrganization"
         >
-          <span itemprop="name">Company Name 2</span>
-
-          <span
-            itemprop="location"
-            itemscope
-            itemtype="https://schema.org/Place"
-          >
-            <a itemprop="url" href="http://link-to-company.com">Company URL</a>
-            <span
-              itemprop="address"
-              itemscope
-              itemtype="https://schema.org/PostalAddress"
-            >
-              <span itemprop="addressLocality">Anywhere,USA</span>
-            </span>
+          <h3 itemprop="description">
+            <abbr title="Certificate">NREMT</abbr> Nationally Registered
+            Emergency Medical Technician
+          </h3>
+          <span itemprop="name">Pulaski Technical College</span>
+          <span itemprop="location" itemscope
+            >North Little Rock, AR, USA,
           </span>
-        </span>
+          <span>2019</span>
+        </article>
 
-        <div>
-          <span>February 2006</span> -
-          <span>February 2009</span>
-        </div>
-
-        <p itemprop="description">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit...
-        </p>
-      </article>
-    </section>
-
-    <section id="education">
-      <h2>Education</h2>
-
-      <article
-        class="certificate"
-        itemprop="alumniOf"
-        itemscope
-        itemtype="https://schema.org/EducationalOrganization"
-      >
-        <h3 itemprop="description">
-          <abbr title="Bachelor of Science">BS</abbr> Computer Science with
-          minor in Geography
-        </h3>
-        <span itemprop="name">University of Arkansas</span>
-        <span itemprop="location" itemscope>Little Rock, AR, USA</span>
-        <span>2005-2007</span>
-      </article>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <div id="copyright">
-      &copy; 2026 <a href="../index.html">Jessi Lewis</a> |
-      <a href="#top">Top</a>
-    </div>
-  </footer>
+        <article
+          class="certificate"
+          itemprop="alumniOf"
+          itemscope
+          itemtype="https://schema.org/EducationalOrganization"
+        >
+          <h3 itemprop="description">
+            <abbr title="Associate of Science">AS</abbr> Associate of Science -
+            Criminal Justice
+          </h3>
+          <span itemprop="name">Central Texas College</span>
+          <span itemprop="location" itemscope>Killeen, TX, USA, </span>
+          <span>2018</span>
+        </article>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+      <div id="copyright">
+        &copy; 2026 <a href="../index.html">Jessi Lewis</a> |
+        <a href="#top">Top</a>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>
