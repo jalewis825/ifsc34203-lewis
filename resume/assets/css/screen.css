@@ -42,7 +42,6 @@ img {
 
 /* ------ Design Time Styles -------*/
 .container {
-  max-width: 680px;
   margin: 0 auto;
   background: var(--container-bg-color);
 }
