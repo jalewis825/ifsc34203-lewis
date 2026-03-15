@@ -126,21 +126,23 @@ main h1:after {
 
 dl {
   display: grid;
-  grid-template: repeat(8, 40px) / 8em 1fr;
+  grid-template-columns: 10rem 1fr;
+}
+dt,
+dd {
+  margin: 0;
+  padding: 12px 0;
+  border: 0;
+  border-bottom: 1px solid var(--accent-color-1);
 }
 
 dt {
   font-weight: 700;
   grid-column: 1;
-  padding: 10px 0;
-  border-bottom: 1px solid var(--accent-color-1);
 }
 
 dd {
-  margin: 0;
   grid-column: 2;
-  padding: 10px 0;
-  border-bottom: 1px solid var(--accent-color-1);
 }
 
 .bio img {
