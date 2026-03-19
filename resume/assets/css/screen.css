@@ -70,7 +70,7 @@ header.container {
 }
 
 nav {
-  padding: 20px 15px;
+  padding: 20px 10px;
 }
 
 nav ul {
@@ -78,20 +78,20 @@ nav ul {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   padding: 0;
   margin: 0;
-  gap: 10px;
+  gap: 8px;
   list-style: none;
 }
 
 nav a:link,
 nav a:visited {
   display: grid;
-  padding: 8px 8px;
+  padding: 8px 4px;
   border: 1px solid var(--accent-color-1);
   place-items:center;
   min-width: 0;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 0.75em;
+  font-size: 0.7em;
   background: var(--button-color);
   transition: background-color 0.5s ease;
 }
