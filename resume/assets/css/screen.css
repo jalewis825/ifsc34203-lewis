@@ -99,6 +99,11 @@ nav a {
   border-radius: 10px;
 }
 
+nav ul,
+nav a {
+  min-width: 0;
+}
+
 nav a:focus {
   background: var(--container-bg-color);
   color: var(--primary-type-color);
