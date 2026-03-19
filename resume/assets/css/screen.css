@@ -57,6 +57,17 @@ a:visited {
   color: var(--primary-type-color);
 }
 
+a:focus,
+button:focus {
+  color: var(--accent-color-1);
+  text-decoration: none;
+}
+
+header.container {
+  border: 1px solid var(--accent-color-1);
+  border-bottom: none;
+}
+
 nav {
   padding: 20px 15px;
 }
@@ -87,9 +98,37 @@ nav a {
   border-radius: 10px;
 }
 
-nav a:hover {
+nav a:focus {
   background: var(--container-bg-color);
-  transform: translateY(-2px);
+  color: var(--primary-type-color);
+}
+
+main.container {
+  display: grid;
+  grid-template-areas:
+    "title"
+    "about"
+    "skills"
+    "education"
+    "experience";
+  border: 1px solid var(--accent-color-1);
+  border-top: none;
+}
+
+.page-title {
+  grid-area: title;
+}
+#about {
+  grid-area: about;
+}
+#skills {
+  grid-area: skills;
+}
+#experience {
+  grid-area: experience;
+}
+#education {
+  grid-area: education;
 }
 
 main {
@@ -172,11 +211,7 @@ dd {
   color: var(--primary-type-color);
 }
 
-.related-links li:hover {
-  transform: translateY(-2px);
-}
-
-.related-links a:hover {
+.related-links a:focus {
   background: var(--container-bg-color);
 }
 
@@ -208,11 +243,6 @@ dd {
   border-radius: 10px;
   background: var(--button-color);
   transition: background-color 0.5s ease;
-}
-
-.skills-grid .skill:hover {
-  background: var(--main-bg-color);
-  transform: translateY(-2px);
 }
 
 .job,
@@ -250,8 +280,7 @@ dd {
   margin-bottom: 3px;
 }
 
-.job a:hover {
-  color: var(--accent-color-1);
+.job a:focus {
   text-decoration: none;
 }
 
@@ -262,44 +291,22 @@ dd {
   font-size: 0.95rem;
 }
 
+.job:last-child {
+  border: none;
+}
+
 footer {
   text-align: center;
   padding: 20px 0;
 }
 
-main.container {
-  display: grid;
-  grid-template-areas:
-    "title"
-    "about"
-    "skills"
-    "education"
-    "experience";
-}
-
-.page-title {
-  grid-area: title;
-}
-#about {
-  grid-area: about;
-}
-#skills {
-  grid-area: skills;
-}
-#experience {
-  grid-area: experience;
-}
-#education {
-  grid-area: education;
-}
-
 @media screen and (min-width: 768px) {
   header.container {
-    max-width: 900px;
+    max-width: 992px;
   }
 
   main.container {
-    max-width: 900px;
+    max-width: 992px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
@@ -387,7 +394,7 @@ main.container {
     grid-column: 2;
   }
 
-  /*I had to use AI to figure this out; it was driving me bonkers*/
+  /*I had to use AI to help me figure this out; it was driving me bonkers*/
   .job > div[itemprop="worksFor"] {
     grid-column: 1/3;
     display: grid;
@@ -397,5 +404,40 @@ main.container {
 
   .job > div[itemprop="worksFor"] p {
     grid-column: 2;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  header.container {
+    max-width: 1200px;
+  }
+
+  main.container {
+    max-width: 1200px;
+  }
+
+  a:hover {
+    color: var(--accent-color-1);
+    text-decoration: none;
+  }
+
+  nav a:hover {
+    background: var(--container-bg-color);
+    transform: translateY(-2px);
+    color: var(--primary-type-color);
+  }
+
+  .skills-grid .skill:hover {
+    background: var(--main-bg-color);
+    transform: translateY(-2px);
+  }
+
+  .related-links li:hover {
+    transform: translateY(-2px);
+  }
+
+  .related-links a:hover {
+    background: var(--container-bg-color);
+    color: var(--primary-type-color);
   }
 }
