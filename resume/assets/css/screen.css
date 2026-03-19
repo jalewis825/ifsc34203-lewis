@@ -444,4 +444,8 @@ footer a {
     background: var(--container-bg-color);
     color: var(--primary-type-color);
   }
+
+  footer a:hover {
+  transition: color 0.3s ease;
+}
 }
