@@ -145,6 +145,10 @@ main h1 {
   font-variant: small-caps;
 }
 
+h2{
+  margin-top:0;
+}
+
 main h1:before,
 main h1:after {
   background-color: var(--accent-color-1);
@@ -268,7 +272,6 @@ dd {
 
 .job p {
   max-width: 55ch;
-  margin-top: 18px;
   line-height: 1.5;
 }
 
@@ -278,7 +281,7 @@ dd {
   text-underline-offset: 3px;
   transition: color 0.3s ease;
   font-weight: 700;
-  margin-bottom: 3px;
+  margin-bottom: 5px;
 }
 
 .job a:focus {
@@ -388,7 +391,7 @@ footer {
 
   .job a {
     font-size: 1.2rem;
-    margin-right: 10px;
+    margin-right: 15px;
     letter-spacing: 0.3px;
     text-underline-offset: 5px;
     
@@ -400,7 +403,7 @@ footer {
   }
 
   .job p {
-    margin-top: 10px;
+    margin-top: 5px;
     line-height: 1.5;
     font-size: 1.1rem;
   }
