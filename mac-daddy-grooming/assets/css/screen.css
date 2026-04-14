@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700&family=Pacifico&display=swap");
+
+:root {
+  --macdaddy-hero-bg: #f2e3d0;
+  --macdaddy-services-bg: #f2e3d5;
+  --macdaddy-header-txt: #8c4014;
+  --macdaddy-accent-brown: #a65132;
+  --macdaddy-nav-bg: #d2b795;
+  --macdaddy-tan-bg: #d4b896; /*gallery & about us*/
+  --macdady-icon-circle-bg: #f5e6d3;
+  /*borders are just black
+    white appearing text is just white*/
+  /*header font: Bebas Neue
+    "real McCday": Pacifico
+    everything else: Nunito*/
+}
+
+.navbar {
+  background-color: var(--macdaddy-nav-bg) !important;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.5rem;
+}
+
+.navbar-brand {
+  color: var(--macdaddy-header-txt) !important;
+}
+
+.nav-link {
+  color: var(--macdaddy-header-txt) !important;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--macdaddy-accent-brown) !important;
+}
+
+.hero {
+  background-image: url("../img/hero-bg.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 20% center;
+  min-height: 100vh;
+  position: relative;
+  padding-top: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-card {
+  background-color: var(--macdaddy-hero-bg);
+  border: 3px solid black;
+  border-radius: 20px;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.4);
+  z-index: 0;
+}
+
+.btn-color {
+  background-color: var(--macdaddy-accent-brown);
+  border-radius: 20px;
+  border: 2px solid black;
+}
