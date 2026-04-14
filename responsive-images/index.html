@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Responsive Images assignment" />
+    <meta name="author" content="Jessi Lewis" />
+    <title>IFSC 34203 | Jessi Lewis | Responsive Images</title>
+    <link rel="stylesheet" href="assets/css/screen.css" />
+  </head>
+  <body>
+    <main>
+      <img
+        src="assets/img/link-hyrule-400.webp"
+        alt="Person dressed as Link from The Legend of Zelda, holding the Master Sword and Hylian Shield, standing in Hyrule Field"
+        srcset="
+          assets/img/link-hyrule-2000.webp 2000w,
+          assets/img/link-hyrule-1000.webp 1000w,
+          assets/img/link-hyrule-600.webp   600w,
+          assets/img/link-hyrule-400.webp   400w
+        "
+        sizes="(min-width:1000px) 50vw, 400px"
+      />
+    </main>
+  </body>
+</html>
