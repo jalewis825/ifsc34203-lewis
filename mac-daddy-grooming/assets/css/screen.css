@@ -19,15 +19,6 @@
   --font-script: "Pacifico", cursive;
   --font-body: "Nunito", sans-serif;
 
-  /*Spacing scale*/
-  --space-xs: 0.25rem;
-  --space-sm: 0.5rem;
-  --space-md: 1rem;
-  --space-lg: 1.5rem;
-  --space-xl: 2rem;
-  --space-2xl: 3rem;
-  --space-3xl: 4rem;
-
   /*Layout*/
   --container-max: 1140px;
   --radius: 15px;
@@ -89,7 +80,6 @@ h3 {
   color: var(--accent-brown);
   line-height: 1.2;
   font-size: 1.75rem;
-  font-weight: 300;
 }
 
 h4 {
@@ -109,8 +99,89 @@ h4 {
   white-space: nowrap; /* 1 */
 }
 
+/*----------Base style----------*/
 .nav {
   background-color: var(--nav-bg);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.nav-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-brand img {
+  display: block;
+  height: 60px;
+  width: auto;
+}
+
+.nav-toggle {
+  display: none;
+  margin-left: auto;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.nav-toggle-bar {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: var(--header-txt);
+  border-radius: 2px;
+}
+
+.js-enabled .nav-toggle {
+  display: flex;
+}
+
+.js-enabled .nav-menu {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  transition:
+    max-height 0.3s ease,
+    opacity 0.3s ease,
+    visibility 0.3s;
+  position: absolute;
+  left: 0;
+  background-color: var(--nav-bg);
+  padding: 0 1rem;
+  z-index: 100;
+  top: calc(100% - 8px); /*overlap nav to avoid visual seam*/
+}
+
+.js-enabled .nav-menu li {
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.js-enabled .nav-menu li:first-child {
+  border-top: none;
+}
+
+.js-enabled .nav.is-open .nav-menu {
+  max-height: 500px;
+  opacity: 1;
+  visibility: visible;
 }
 
 .hero {
@@ -130,6 +201,7 @@ h4 {
   padding: 2rem;
   position: relative;
   z-index: 1;
+  border: var(--border-style);
 }
 
 .hero::before {
@@ -147,10 +219,47 @@ h4 {
   border: var(--border-style);
 }
 
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: auto;
+  color: var(--text);
+  word-wrap: break-word;
+  background-color: var(--tan-bg);
+  background-clip: border-box;
+  border: var(--border-style);
+  border-radius: var(--radius);
+}
+
 /*----------Tablet----------*/
 @media screen and (min-width: 768px) {
   .hero {
     background-image: url(../img/hero-mac-1200.webp);
+  }
+
+  .nav-menu,
+  .js-enabled .nav-menu {
+    display: flex;
+    margin-left: auto;
+    gap: 1.5rem;
+    width: auto;
+    max-height: none;
+    opacity: 1;
+    visibility: visible;
+    overflow: visible;
+    position: static;
+    padding: 0;
+    background: none;
+  }
+
+  .js-enabled .nav-toggle {
+    display: none;
+  }
+
+.js-enabled .nav-menu li {
+    border-top: none;
   }
 }
 
@@ -160,3 +269,5 @@ h4 {
     background-image: url(../img/hero-mac-2000.webp);
   }
 }
+
+/*AI was used to walk me through building the hamburger menu*/
