@@ -31,23 +31,29 @@
   /*Layout*/
   --container-max: 1140px;
   --radius: 15px;
-  --boarder-style: 3px solid black;
+  --border-style: 3px solid black;
 }
 
-* { box-sizing: border-box; margin:0; padding:0;}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-html{
+html {
   scroll-behavior: smooth;
+  scroll-padding-top: 90px;
 }
 
-body{
+body {
   font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.6;
   color: var(--text);
+  background-color: var(--body-bg);
 }
 
-a{
+a {
   color: var(--header-txt);
   text-decoration: none;
 }
@@ -60,23 +66,25 @@ a:focus-visible {
 /* ------ Fluid Images -------*/
 img {
   max-width: 100%;
-  border: 2px solid var(--accent-color-1);
-  border-radius: 15px;
+  height: auto;
+  display: block;
 }
 
 /* ------ Typography -------*/
-h1, h2, h4{
+h1,
+h2,
+h4 {
   font-family: var(--font-heading);
   letter-spacing: 0.02em;
   line-height: 1.2;
   color: var(--header-txt);
 }
 
-h2{
+h2 {
   font-size: 2.5rem;
 }
 
-h3{
+h3 {
   font-family: var(--font-script);
   color: var(--accent-brown);
   line-height: 1.2;
@@ -84,7 +92,7 @@ h3{
   font-weight: 300;
 }
 
-h4{
+h4 {
   font-size: 1.5rem;
 }
 
@@ -101,7 +109,7 @@ h4{
   white-space: nowrap; /* 1 */
 }
 
-.navbar {
+.nav {
   background-color: var(--nav-bg);
 }
 
@@ -118,7 +126,7 @@ h4{
 }
 
 .hero-card {
-  background-color: var(--macdaddy-hero-bg);
+  background-color: var(--hero-bg);
   padding: 2rem;
   position: relative;
   z-index: 1;
@@ -136,19 +144,19 @@ h4{
   background-color: var(--accent-brown);
   color: white;
   border-radius: var(--radius);
-  border: var(--boarder-style);
+  border: var(--border-style);
 }
 
 /*----------Tablet----------*/
 @media screen and (min-width: 768px) {
-  .hero{
+  .hero {
     background-image: url(../img/hero-mac-1200.webp);
   }
 }
 
 /*----------Desktop----------*/
 @media screen and (min-width: 1200px) {
-  .hero{
+  .hero {
     background-image: url(../img/hero-mac-2000.webp);
   }
 }
