@@ -47,7 +47,7 @@ img {
   border-radius: 15px;
 }
 
-/* ------ Design Time Styles -------*/
+/* ------ Base Styles -------*/
 .container {
   margin: 0 auto;
 }
@@ -69,11 +69,15 @@ main {
   background-color: var(--container-bg-color);
 }
 
+.branding {
+  text-align: center;
+}
+
 h1 {
   margin: 0;
   font-size: 2rem;
   color: var(--primary-type-color);
-  padding: 20px;
+  padding: 20px 0 5px 0;
 }
 
 .site-title {
@@ -90,6 +94,7 @@ h1 {
 }
 
 .subtitle {
+  display: block;
   margin-top: 0.25rem;
   font-size: 0.95rem;
   color: var(--primary-type-color);
@@ -104,9 +109,10 @@ h1 {
   opacity: 0.8;
 }
 
+/*AI helped me with getting the nested list to display properly*/
 .nav {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 1rem;
   align-items: start;
 }
@@ -152,11 +158,10 @@ nav ul {
   padding: 8px 10px;
   border-radius: 10px;
   border: 0;
-  background: transparent;
+  background: rgba(0, 0, 0, 0.4);
   color: var(--primary-type-color);
   text-decoration: none;
   font: inherit;
-  background: rgba(0, 0, 0, 0.4);
 }
 
 .nav > li > a:hover,
@@ -196,8 +201,9 @@ nav ul {
 }
 
 .nav li ul li ul {
-  top: 0;
-  left: calc(100% + 8px);
+  left: auto;
+  top: auto;
+  margin-top: 8px;
   margin-left: 0;
   width: 100%;
 }
@@ -229,71 +235,67 @@ nav ul {
   transform: translateX(-50%);
 }
 
-.photo-carousel .carousel,
-.photo-carousel .carousel-inner,
-.photo-carousel .carousel-item,
-.photo-carousel .carousel-item img {
-  height: auto;
-}
-
 /*I was having trouble getting my photos to be responsive and resize with the carousel. 
 I used AI to help me troubleshoot and get to this solution*/
+.photo-carousel .carousel-item,
+.photo-carousel .carousel-item img {
+  padding: clamp(15px, 4vw, 50px);
+}
+
 .photo-carousel .carousel-item img {
   width: 100%;
   aspect-ratio: 16/9;
   object-fit: cover !important;
   object-position: center;
+  background-color: var(--button-color);
 }
- 
+
 .carousel-control-prev,
 .carousel-control-next {
-  color: var(--accent-color-1);
   opacity: 0.8;
 }
 
-.carousel-indicators button {
-  background-color: var(--accent-color-1);
+.carousel-control-prev{
+  margin-left: 5px;
+}
+
+.carousel-control-next{
+  margin-right: 5px;
+}
+
+.carousel-indicators {
+  margin: -1px;
 }
 
 .carousel-indicators button.active {
-  background-color: var(--primary-type-color);
+  background-color: var(--button-hover-color);
 }
 
 /* ----- Media Queries ----- */
 
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 993px) {
   .branding {
-    text-align: center;
+    text-align: left;
+    margin-bottom: 15px;
   }
 
   h1 {
-    padding: 20px 0 5px 0;
-  }
-
-  .subtitle {
-    display: block;
+    padding: 20px;
   }
 
   .nav {
-    grid-template-columns: 1fr;
-  }
-
-  .nav li ul {
-    position: absolute;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .nav li ul li ul {
-    left: auto;
-    top: auto;
-    margin-top: 8px;
+    top: 0;
+    left: calc(100% + 8px);
+    margin-top: 0;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    opacity: 0.8;
+    margin: 0;
   }
 }
-
-@media screen and (min-width: 993px){
-  div.branding{
-    margin-bottom: 15px;
-  }
-}
-
-/* ----- AI Statement ----- */
-/*ChatGPT helped me with getting the nested list to display properly*/

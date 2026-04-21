@@ -1,41 +1,112 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700&family=Pacifico&display=swap");
 
+/*----------CUSTOM PROPERTIES----------*/
+
 :root {
-  --macdaddy-hero-bg: #f2e3d0;
-  --macdaddy-services-bg: #f2e3d5;
-  --macdaddy-header-txt: #8c4014;
-  --macdaddy-accent-brown: #a65132;
-  --macdaddy-nav-bg: #d2b795;
-  --macdaddy-tan-bg: #d4b896; /*gallery & about us*/
-  --macdady-icon-circle-bg: #f5e6d3;
-  /*borders are just black
-    white appearing text is just white*/
-  /*header font: Bebas Neue
-    "real McCday": Pacifico
-    everything else: Nunito*/
+  /*Colors*/
+  --hero-bg: #f2e3d0;
+  --services-bg: #f2e3d5;
+  --header-txt: #8c4014;
+  --accent-brown: #a65132;
+  --nav-bg: #d2b795;
+  --tan-bg: #d4b896; /*gallery & about us*/
+  --icon-circle-bg: #f5e6d3;
+  --body-bg: #faf4ea;
+  --text: #3a2817;
+
+  /*Fonts*/
+  --font-heading: "Bebas Neue", sans-serif;
+  --font-script: "Pacifico", cursive;
+  --font-body: "Nunito", sans-serif;
+
+  /*Spacing scale*/
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+
+  /*Layout*/
+  --container-max: 1140px;
+  --radius: 15px;
+  --boarder-style: 3px solid black;
 }
 
-.navbar {
-  background-color: var(--macdaddy-nav-bg) !important;
-  font-family: "Bebas Neue", sans-serif;
+* { box-sizing: border-box; margin:0; padding:0;}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+a{
+  color: var(--header-txt);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--accent-brown);
+}
+
+/* ------ Fluid Images -------*/
+img {
+  max-width: 100%;
+  border: 2px solid var(--accent-color-1);
+  border-radius: 15px;
+}
+
+/* ------ Typography -------*/
+h1, h2, h4{
+  font-family: var(--font-heading);
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  color: var(--header-txt);
+}
+
+h2{
+  font-size: 2.5rem;
+}
+
+h3{
+  font-family: var(--font-script);
+  color: var(--accent-brown);
+  line-height: 1.2;
+  font-size: 1.75rem;
+  font-weight: 300;
+}
+
+h4{
   font-size: 1.5rem;
 }
 
-.navbar-brand {
-  color: var(--macdaddy-header-txt) !important;
+/* ------ Helper Classes -------*/
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap; /* 1 */
 }
 
-.nav-link {
-  color: var(--macdaddy-header-txt) !important;
-}
-
-.nav-link:hover,
-.nav-link:focus {
-  color: var(--macdaddy-accent-brown) !important;
+.navbar {
+  background-color: var(--nav-bg);
 }
 
 .hero {
-  background-image: url("../img/hero-bg.webp");
+  background-image: url("../img/hero-mac-800.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 20% center;
@@ -48,8 +119,6 @@
 
 .hero-card {
   background-color: var(--macdaddy-hero-bg);
-  border: 3px solid black;
-  border-radius: 20px;
   padding: 2rem;
   position: relative;
   z-index: 1;
@@ -64,7 +133,22 @@
 }
 
 .btn-color {
-  background-color: var(--macdaddy-accent-brown);
-  border-radius: 20px;
-  border: 2px solid black;
+  background-color: var(--accent-brown);
+  color: white;
+  border-radius: var(--radius);
+  border: var(--boarder-style);
+}
+
+/*----------Tablet----------*/
+@media screen and (min-width: 768px) {
+  .hero{
+    background-image: url(../img/hero-mac-1200.webp);
+  }
+}
+
+/*----------Desktop----------*/
+@media screen and (min-width: 1200px) {
+  .hero{
+    background-image: url(../img/hero-mac-2000.webp);
+  }
 }
