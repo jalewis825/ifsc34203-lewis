@@ -49,6 +49,7 @@ img {
 /* ------ Base Styles -------*/
 .container {
   margin: 0 auto;
+  border-radius: 10px;
 }
 
 body {
