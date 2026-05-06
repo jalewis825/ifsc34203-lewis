@@ -191,17 +191,10 @@ h4 {
   background-position: 20% center;
   min-height: 100vh;
   position: relative;
-  padding-top: 80px;
+  padding: 80px 1rem 2rem;
   display: flex;
   align-items: center;
-}
-
-.hero-card {
-  background-color: var(--hero-bg);
-  padding: 2rem;
-  position: relative;
-  z-index: 1;
-  border: var(--border-style);
+  justify-content: center;
 }
 
 .hero::before {
@@ -212,14 +205,81 @@ h4 {
   z-index: 0;
 }
 
+.hero-card {
+  position: relative;
+  z-index: 1;
+  background-color: var(--hero-bg);
+  border: var(--border-style);
+  border-radius: var(--radius);
+  padding: 2rem;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-card img {
+  width: 200px;
+  height: auto;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
 .btn-color {
+  display: inline-block;
   background-color: var(--accent-brown);
   color: white;
-  border-radius: var(--radius);
+  border-radius: 50px;
   border: var(--border-style);
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-heading);
+  font-size: 1.375rem;
+  text-align: center;
+  letter-spacing: 0.1rem;
+}
+
+.btn-color:hover,
+.btn-color:focus-visible {
+  background-color: var(--header-txt);
+  color: white;
+}
+
+.hero-card p {
+  font-size: 1.1rem;
+}
+
+.hero-tagline {
+  font-size: 1.375rem;
+  font-weight: 700;
+}
+
+section.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.sub-heading {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .card {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -231,6 +291,37 @@ h4 {
   background-clip: border-box;
   border: var(--border-style);
   border-radius: var(--radius);
+}
+
+.card-title {
+  margin-bottom: 0.75rem;
+}
+
+.card-body {
+  margin-bottom: 1 rem;
+}
+
+.card ul.card-body {
+  list-style: none;
+}
+
+.card ul.card-body li {
+  padding: 0.25rem 0;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.15);
+}
+
+.card ul.card-body li:last-child {
+  border-bottom: none;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.services-grid .card {
+  margin-bottom: 0;
 }
 
 /*----------Tablet----------*/
@@ -258,8 +349,23 @@ h4 {
     display: none;
   }
 
-.js-enabled .nav-menu li {
+  .js-enabled .nav-menu li {
     border-top: none;
+  }
+
+  .hero-buttons {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr 1fr;
+    justify-items: stretch;
+  }
+
+  .services-grid .card:last-child{
+    grid-column: 1/-1;
+    justify-self: center;
   }
 }
 
@@ -268,6 +374,11 @@ h4 {
   .hero {
     background-image: url(../img/hero-mac-2000.webp);
   }
+
+  .services-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+    
 }
 
 /*AI was used to walk me through building the hamburger menu*/
