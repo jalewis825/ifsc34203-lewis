@@ -244,8 +244,13 @@
       <h2 id="gallery-heading" class="heading">Our Groovy Gallery</h2>
       <h3 class="sub-heading">Check out these real sharp lookin' critters!</h3>
       <figure>
-        <div id="gallery-carousel" class="carousel-slide">
-          <div class="carousel-indicators">
+        <div
+          id="gallery-carousel"
+          class="carousel"
+          aria-roledescription="carousel"
+          aria-label="Grommed pets gallery"
+        >
+          <div class="carousel-track">
             <button
               type="button"
               class="active"
@@ -347,79 +352,117 @@
       </figure>
     </section>
 
-    <section id="about" aria-labelledby="about-heading" class="container">
+    <section
+      id="about"
+      aria-labelledby="about-heading"
+      class="container about-section"
+    >
       <h2 id="about-heading" class="heading">The Lowdown on Us</h2>
       <h3 class="sub-heading">Our Story is the real McCoy!</h3>
 
-      <article class="card">
-        <img
-          src="assets/img/about-mac-800.webp"
-          class="card-img"
-          alt="Mac, a brindle and white American Staffordshire Terrier, grinning with his tongue out while sitting in a shopping cart."
-        />
-        <div class="card-body">
-          <h4 class="card-title">Meet Mac</h4>
-          <p class="card-text">
-            Mac Daddy Grooming was a labor of love brought forth from the desire
-            to build a safe grooming environment for
-            <strong>all breeds and species.</strong> Our beloved Mac, who passed
-            away in 2025, was the inspiration behind the name.
-          </p>
-        </div>
-      </article>
+      <div class="about-photos">
+        <article class="card card-photo">
+          <img
+            src="assets/img/about-mac-800.webp"
+            class="card-photo-img"
+            alt="Mac, a brindle and white American Staffordshire Terrier, grinning with his tongue out while sitting in a shopping cart."
+            width="800"
+            height="800"
+          />
+          <div class="card-body">
+            <h4 class="card-title">Meet Mac</h4>
+            <p class="card-text">
+              Mac Daddy Grooming was a labor of love brought forth from the
+              desire to build a safe grooming environment for
+              <strong>all breeds and species.</strong> Our beloved Mac, who
+              passed away in 2025, was the inspiration behind the name.
+            </p>
+          </div>
+        </article>
 
-      <article class="card">
-        <img
-          src="assets/img/about-desi-800.webp"
-          class="card-img"
-          alt="Desi, a brindle American Staffordshire Terrier, sitting in the grass and smiling up at the camera."
-        />
-        <div class="card-body">
-          <h4 class="card-title">Meet Desi</h4>
-          <p class="card-text">
-            Our sweet girl Desi, is the inspiration around making sure even our
-            <strong>reactive</strong> furry friends have the safe space needed
-            to enjoy life just as much as any other dog, which includes getting
-            primped and pampered.
-          </p>
-        </div>
-      </article>
+        <article class="card card-photo">
+          <img
+            src="assets/img/about-desi-800.webp"
+            class="card-photo-img"
+            alt="Desi, a brindle American Staffordshire Terrier, sitting in the grass and smiling up at the camera."
+            width="800"
+            height="800"
+          />
+          <div class="card-body">
+            <h4 class="card-title">Meet Desi</h4>
+            <p class="card-text">
+              Our sweet girl Desi, is the inspiration around making sure even
+              our
+              <strong>reactive</strong> furry friends have the safe space needed
+              to enjoy life just as much as any other dog, which includes
+              getting primped and pampered.
+            </p>
+          </div>
+        </article>
+      </div>
       <aside>
         We take safety and remaining low stress very seriously. Part of the
         reason our pricing might seem higher than our competitors is because we
         only book in
         <strong>two dogs from different families at a time.</strong>
       </aside>
+      <div class="about-features">
+        <article class="card card-icon-feature">
+          <span class="card-icon-large" aria-hidden="true">
+            <img
+              src="assets/img/icons/icon-shield-safe-space.svg"
+              alt=""
+              width="32"
+              height="32"
+            />
+          </span>
+          <div class="card-body">
+            <h4 class="card-title">Safe Space</h4>
+            <p class="card-text">
+              We’ve designed our space so dogs who do not know each other are
+              kept as far away from each other as possible. Your pup will not be
+              placed in stacked kennels on top of other unknown dogs.
+            </p>
+          </div>
+        </article>
 
-      <div class="card">
-        <div class="card-body">
-          <h4 class="card-title">Safe Space</h4>
-          <p class="card-text">
-            We’ve designed our space so dogs who do not know each other are kept
-            as far away from each other as possible. Your pup will not be placed
-            in stacked kennels on top of other unknown dogs.
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-body">
-          <h4 class="card-title">Feline Friends</h4>
-          <p class="card-text">
-            If you are one of our feline patrons, your cat will be the only
-            animal on the salon floor while they are being groomed. It's all
-            about keepin' it real cool for your kitty!
-          </p>
-        </div>
-      </div>
+        <article class="card card-icon-feature">
+          <span class="card-icon-large" aria-hidden="true">
+            <img
+              src="assets/img/icons/icon-star-feline-friends.svg"
+              alt=""
+              width="32"
+              height="32"
+            />
+          </span>
+          <div class="card-body">
+            <h4 class="card-title">Feline Friends</h4>
+            <p class="card-text">
+              If you are one of our feline patrons, your cat will be the only
+              animal on the salon floor while they are being groomed. It's all
+              about keepin' it real cool for your kitty!
+            </p>
+          </div>
+        </article>
 
-      <div class="card">
-        <div class="card-body">
-          <h4 class="card-title">Top Priority</h4>
-          <p class="card-text">
-            Safety is a top priority at Mac Daddy Grooming, only second to love.
-            We're all about making your pet feel like the coolest cat in town!
-          </p>
-        </div>
+        <article class="card card-icon-feature">
+          <span class="card-icon-large" aria-hidden="true">
+            <img
+              src="assets/img/icons/icon-heart-top-priority.svg"
+              alt=""
+              width="32"
+              height="32"
+            />
+          </span>
+          <div class="card-body">
+            <h4 class="card-title">Top Priority</h4>
+            <p class="card-text">
+              Safety is a top priority at Mac Daddy Grooming, only second to
+              love. We're all about making your pet feel like the coolest cat in
+              town!
+            </p>
+          </div>
+        </article>
       </div>
     </section>
 
