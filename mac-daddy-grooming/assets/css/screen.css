@@ -100,6 +100,7 @@ h4 {
 }
 
 /*----------Base style----------*/
+/*----------Navigation----------*/
 .nav {
   background-color: var(--nav-bg);
   display: flex;
@@ -184,6 +185,7 @@ h4 {
   visibility: visible;
 }
 
+/*----------Hero----------*/
 .hero {
   background-image: url("../img/hero-mac-800.webp");
   background-size: cover;
@@ -261,6 +263,7 @@ h4 {
   font-weight: 700;
 }
 
+/*----------Services----------*/
 section.container {
   max-width: var(--container-max);
   margin: 0 auto;
@@ -370,6 +373,7 @@ p.price {
   font-style: italic;
   text-align: center;
 }
+
 .services-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -379,7 +383,10 @@ p.price {
 .services-grid .card {
   margin-bottom: 0;
 }
+/*----------Gallery----------*/
 
+
+/*----------About Us----------*/
 .card-photo {
   background-color: var(--hero-bg);
   text-align: center;
@@ -389,8 +396,8 @@ p.price {
 }
 
 .card-photo-img {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   object-fit: cover;
   border: var(--border-style);
   margin-bottom: 1rem;
@@ -411,6 +418,10 @@ p.price {
   margin-bottom: 0;
 }
 
+.card-body strong{
+  color: var(--accent-brown);
+}
+
 .card-icon-feature {
  background-color: var(--hero-bg);
  text-align: center;
@@ -418,11 +429,67 @@ p.price {
  align-items: center;
 }
 
+.card-icon-large{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background-color: var(--header-txt);
+  border: var(--border-style);
+  border-radius: 50px;
+  flex-shrink: 0;
+  margin-bottom: 1rem;
+}
+
+.card-icon-large img {
+  width: 32px;
+  height: 32px;
+  filter: invert(1) brightness(2); /*changes SVG line from black to white*/
+}
+
+.card-icon-feature .card-title{
+  margin-bottom: 0.75rem;
+}
+
+.card-icon-feature .card-body{
+  padding: 0;
+}
+
 .about-features{
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
 }
+
+.about-features .card{
+  margin-bottom: 0;
+}
+
+.about-callout{
+  background-color: var(--hero-bg);
+  border: var(--border-style);
+  border-radius: var(--radius);
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.about-callout p{
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.about-callout strong{
+  color: var(--accent-brown);
+}
+
+/*----------Booking Form----------*/
+
+
+/*----------Footer----------*/
+
+
 /*----------Tablet----------*/
 @media screen and (min-width: 768px) {
   .hero {
@@ -471,20 +538,6 @@ p.price {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-
-.card-icon-large{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 70px;
-  height: 70px;
-  background-color: var(--header-txt);
-  border: var(--border-style);
-  border-radius: 50px;
-  flex-shrink: 0;
-  margin-bottom: 1rem;
-}
-
 
 .about-features{
   grid-template-columns: 1fr 1fr 1fr;

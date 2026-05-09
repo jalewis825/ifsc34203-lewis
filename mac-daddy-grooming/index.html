@@ -400,11 +400,13 @@
           </div>
         </article>
       </div>
-      <aside>
-        We take safety and remaining low stress very seriously. Part of the
-        reason our pricing might seem higher than our competitors is because we
-        only book in
-        <strong>two dogs from different families at a time.</strong>
+      <aside class="about-callout">
+        <p>
+          We take safety and remaining low stress very seriously. Part of the
+          reason our pricing might seem higher than our competitors is because
+          we only book in
+          <strong>two dogs from different families at a time.</strong>
+        </p>
       </aside>
       <div class="about-features">
         <article class="card card-icon-feature">
@@ -471,97 +473,132 @@
       <h3 class="sub-heading">
         Let's get your furry friend looking' real sharp!
       </h3>
-      <form>
-        <div class="card">
-          <label for="ownerName" class="form-label">Your Name</label>
-          <input
-            type="text"
-            class="form-control"
-            id="ownerName"
-            placeholder="John Doe"
-          />
 
-          <label for="ownerEmail" class="form-label">Email Address</label>
-          <input
-            type="email"
-            class="form-control"
-            id="ownerEmail"
-            placeholder="name@example.com"
-          />
+      <form class="booking-form">
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="ownerName">
+              <img src="assets/img/icons/icon-name.svg" alt="" width="20" height="20" class="form-icon"/>
+              Your Name</label>
+            <input
+              type="text"
+              id="ownerName"
+              name="ownerName"
+              placeholder="John Doe"
+              required
+              autocomplete="name"
+            />
+          </div>
 
-          <label for="phoneNumber" class="form-label">Phone Number</label>
-          <input
-            type="tel"
-            class="form-control"
-            id="phoneNumber"
-            placeholder="(555) 123-4567"
-          />
+          <div class="form-field">
+            <label for="ownerEmail">
+              <img src="assets/img/icons/icon-email.svg" alt="" width="20" height="20" class="form-icon"/>
+              Email Address</label>
+            <input
+              type="email"
+              id="ownerEmail"
+              name="ownerEmail"
+              placeholder="name@example.com"
+              required
+              autocomplete="email"
+            />
+          </div>
 
-          <label for="petName" class="form-label">Pet's Name</label>
-          <input
-            type="text"
-            class="form-control"
-            id="petName"
-            placeholder="Mac"
-          />
+          <div class="form-field">
+            <label for="phoneNumber">
+              <img src="assets/img/icons/icon-phone.svg" alt="" width="20" height="20" class="form-icon"/>
+              Phone Number</label>
+            <input
+              type="tel"
+              id="phoneNumber"
+              name="phoneNumber"
+              placeholder="(555) 123-4567"
+              required
+              autocomplete="tel"
+              pattern="[\(]?[0-9]{3}[\)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4}"
+            />
+          </div>
 
-          <label for="petType" class="form-label">Pet Type</label>
-          <select
-            class="form-select"
-            id="petType"
-            aria-label="Pet type selection"
-          >
-            <option selected disabled>Select Pet Type</option>
-            <option value="dog">Dog</option>
-            <option value="cat">Cat</option>
-          </select>
+          <div class="form-field">
+            <label for="petName">
+              <img src="assets/img/icons/icon-pet-name-type.svg" alt="" width="20" height="20" class="form-icon"/>
+              Pet's Name</label>
+            <input
+              type="text"
+              id="petName"
+              name="petName"
+              placeholder="Mac"
+              required
+            />
+          </div>
 
-          <label for="serviceType" class="form-label">Service</label>
-          <select
-            class="form-select"
-            id="serviceType"
-            aria-label="Service selection"
-          >
-            <option selected disabled>Select a service</option>
-            <option value="greaser">The Greaser</option>
-            <option value="sockHop">The Sock Hop</option>
-            <option value="hotRod">The Hot Rod</option>
-            <option value="blowOff">The Blow Off</option>
-            <option value="grody">The Grody Groom</option>
-            <option value="soupedUp">Souped Up</option>
-            <option value="coolCat">The Cool Cat</option>
-          </select>
+          <div class="form-field">
+            <label for="petType">
+              <img src="assets/img/icons/icon-pet-name-type.svg" alt="" width="20" height="20" class="form-icon"/>
+              Pet Type</label>
+            <select id="petType" name="petType" required>
+              <option value="" selected disabled>Select Pet Type</option>
+              <option value="dog">Dog</option>
+              <option value="cat">Cat</option>
+            </select>
+          </div>
 
-          <label for="appointmentDate" class="form-label">Preferred Date</label>
-          <input type="date" class="form-control" id="appointmentDate" />
+          <div class="form-field">
+            <label for="serviceType">
+              <img src="assets/img/icons/icon-services.svg" alt="" width="20" height="20" class="form-icon"/>
+              Service</label>
+            <select id="serviceType" name="serviceType" required>
+              <option value="" selected disabled>Select a service</option>
+              <option value="greaser">The Greaser</option>
+              <option value="sockHop">The Sock Hop</option>
+              <option value="hotRod">The Hot Rod</option>
+              <option value="blowOff">The Blow Off</option>
+              <option value="grody">The Grody Groom</option>
+              <option value="soupedUp">Souped Up</option>
+              <option value="coolCat">The Cool Cat</option>
+            </select>
+          </div>
 
-          <label for="appointmentTime" class="form-label">Preferred Time</label>
-          <select
-            class="form-select"
-            id="appointmentTime"
-            aria-label="appointment time selection"
-          >
-            <option selected disabled>Select a time</option>
-            <option value="0900">9:00 AM</option>
-            <option value="1100">11:00 AM</option>
-            <option value="1300">1:00 PM</option>
-            <option value="1500">3:00 PM</option>
-            <option value="1700">5:00 PM</option>
-          </select>
+          <div class="form-field">
+            <label for="appointmentDate">
+              <img src="assets/img/icons/icon-calendar.svg" alt="" width="20" height="20" class="form-icon"/>
+              Preferred Date</label>
+            <input
+              type="date"
+              id="appointmentDate"
+              name="appointmentDate"
+              required
+            />
+          </div>
 
-          <label for="exampleFormControlTextarea1" class="form-label"
-            >Special Requests or Notes</label
-          >
-          <textarea
-            class="form-control"
-            id="exampleFormControlTextarea1"
-            rows="3"
-            placeholder="Tell us anything special about your pet or any questions you have."
-          ></textarea>
+          <div class="form-field">
+            <label for="appointmentTime">
+              <img src="assets/img/icons/icon-clock.svg" alt="" width="20" height="20" class="form-icon"/>
+              Preferred Time</label>
+            <select id="appointmentTime" name="appointmentTime" required>
+              <option value="" selected disabled>Select a time</option>
+              <option value="0900">9:00 AM</option>
+              <option value="1100">11:00 AM</option>
+              <option value="1300">1:00 PM</option>
+              <option value="1500">3:00 PM</option>
+              <option value="1700">5:00 PM</option>
+            </select>
+          </div>
 
-          <input class="btn" type="submit" value="Book that appointment!" />
+          <div class="form-field form-field-full">
+            <label for="special Requests">Special Requests or Notes</label>
+            <textarea
+              id="specialRequests"
+              name="specialRequests"
+              rows="4"
+              placeholder="Tell us anything special about your pet or any questions you have."
+            ></textarea>
+          </div>
 
-          <p>We'll send you a text to confirm your spot, cool cat!</p>
+          <div class="form-field form-field-full form-field-submit">
+            <button type="submit" class="btn-color">Book that appointment!</button>
+            <p class="form-note">We'll send you a text to confirm your spot, cool cat!</p>
+          </div>
         </div>
       </form>
     </section>
