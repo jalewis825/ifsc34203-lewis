@@ -13,6 +13,7 @@
   --icon-circle-bg: #f5e6d3;
   --body-bg: #faf4ea;
   --text: #3a2817;
+  --form-field-bg: #D9B89C;
 
   /*Fonts*/
   --font-heading: "Bebas Neue", sans-serif;
@@ -485,7 +486,94 @@ p.price {
 }
 
 /*----------Booking Form----------*/
+.booking-form{
+  background-color: white;
+  border: var(--border-style);
+  border-radius: var(--radius);
+  padding: 2rem 1.5rem;
+}
 
+.form-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.form-field{
+  display:flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-field label{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.10rem;
+}
+
+.form-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  background-color: var(--hero-bg);
+  border: 2px solid var(--form-field-bg);
+  border-radius: var(--radius);
+  padding: 0.65rem 1rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text);
+  width: 100%;
+}
+
+.form-field textarea{
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color:var(--accent-brown);
+  opacity: 0.6;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: 3px solid var(--header-txt);
+  outline-offset: 1.5px;
+}
+
+.form-field input:invalid:not(:placeholder-shown),
+.form-field select:invalid:not([value=""]),
+.form-field textarea:invalid:not(:placeholder-shown) {
+  border-color: #c0392b;
+}
+
+.form-field-submit {
+  align-items: center;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.form-field-submit .btn-color {
+  font-size: 1.5rem;
+  padding: 0.85rem 2 rem;
+}
+
+.form-note{
+  color: var(--accent-brown);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
 
 /*----------Footer----------*/
 
@@ -556,5 +644,3 @@ p.price {
   }
     
 }
-
-/*AI was used to walk me through building the hamburger menu*/
