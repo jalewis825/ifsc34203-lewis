@@ -257,12 +257,7 @@
           Check out these real sharp lookin' critters!
         </h3>
         <figure>
-          <div
-            id="gallery-carousel"
-            class="carousel"
-            aria-roledescription="carousel"
-            aria-label="Groomed pets gallery"
-          >
+          <div id="gallery-carousel" class="carousel">
             <div class="carousel-track">
               <div class="carousel-item is-active">
                 <img
@@ -366,42 +361,18 @@
               aria-label="Next slide"
             ></button>
 
-            <div
-              class="carousel-indicators"
-              role="tablist"
-              aria-label="Choose slide"
-            >
+            <div class="carousel-indicators">
               <button
                 type="button"
                 class="is-active"
                 aria-label="Slide 1"
-                aria-selected="true"
+                aria-current="true"
               ></button>
-              <button
-                type="button"
-                aria-label="Slide 2"
-                aria-selected="false"
-              ></button>
-              <button
-                type="button"
-                aria-label="Slide 3"
-                aria-selected="false"
-              ></button>
-              <button
-                type="button"
-                aria-label="Slide 4"
-                aria-selected="false"
-              ></button>
-              <button
-                type="button"
-                aria-label="Slide 5"
-                aria-selected="false"
-              ></button>
-              <button
-                type="button"
-                aria-label="Slide 6"
-                aria-selected="false"
-              ></button>
+              <button type="button" aria-label="Slide 2"></button>
+              <button type="button" aria-label="Slide 3"></button>
+              <button type="button" aria-label="Slide 4"></button>
+              <button type="button" aria-label="Slide 5"></button>
+              <button type="button" aria-label="Slide 6"></button>
             </div>
           </div>
           <figcaption class="visually-hidden">
@@ -788,8 +759,10 @@
         <div class="footer-bottom">
           <p>
             Made with
-            <span class="footer-heart" aria-label="love">&hearts;</span> for Mac
-            & Desi
+            <span class="footer-heart" role="img" aria-label="love"
+              >&hearts;</span
+            >
+            for Mac &amp; Desi
           </p>
           <p>
             &copy; 2026 Mac Daddy Grooming Salon. All rights reserved. Stay
