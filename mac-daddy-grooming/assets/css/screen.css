@@ -748,17 +748,6 @@ p.price {
   padding-right: 2.5rem;
 }
 
-.form-field input[type="date"]:not(:focus):invalid::-webkit-datetime-edit {
-  color: var(--accent-brown);
-  opacity: 0.6;
-}
-
-.form-field input[type="date"]:focus::-webkit-datetime-edit,
-.form-field input[type="date"]:valid::-webkit-datetime-edit {
-  color: var(--text);
-  opacity: 1;
-}
-
 .form-note {
   color: var(--accent-brown);
   font-style: italic;
