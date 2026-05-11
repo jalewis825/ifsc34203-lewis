@@ -711,6 +711,15 @@ p.price {
   outline-offset: 1.5px;
 }
 
+.form-field input[type="date"] {
+  box-sizing: border-box;
+  max-width: 100%;
+  /* iOS-specific: prevents the native styling from overflowing */
+  /*some of my feedback was about the calendar overflowing on safari*/
+  -webkit-appearance: none;
+  appearance: none;
+}
+
 .booking-form.was-validated input:invalid,
 .booking-form.was-validated select:invalid,
 .booking-form.was-validated textarea:invalid {
