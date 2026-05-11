@@ -737,6 +737,28 @@ p.price {
   padding: 0.85rem 2rem;
 }
 
+.form-field select,
+.form-field input[type="date"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%238c4014'><path d='M4 6l4 4 4-4'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 16px;
+  padding-right: 2.5rem;
+}
+
+.form-field input[type="date"]:not(:focus):invalid::-webkit-datetime-edit {
+  color: var(--accent-brown);
+  opacity: 0.6;
+}
+
+.form-field input[type="date"]:focus::-webkit-datetime-edit,
+.form-field input[type="date"]:valid::-webkit-datetime-edit {
+  color: var(--text);
+  opacity: 1;
+}
+
 .form-note {
   color: var(--accent-brown);
   font-style: italic;
