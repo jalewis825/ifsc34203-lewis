@@ -803,6 +803,7 @@ p.price {
 
 .footer-hours p{
   white-space: nowrap;
+  font-size: 0.95rem;
 }
 
 .site-footer h4 {
