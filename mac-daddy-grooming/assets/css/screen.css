@@ -254,6 +254,10 @@ h4 {
   width: 100%;
 }
 
+.hero-subtagline{
+  font-style: italic;
+}
+
 .btn-color {
   display: inline-block;
   background-color: var(--accent-brown);
@@ -544,6 +548,7 @@ p.price {
 .section-about {
   background-color: var(--form-field-bg);
 }
+
 .card-photo {
   background-color: var(--hero-bg);
   text-align: center;
@@ -705,6 +710,16 @@ p.price {
   outline: 3px solid var(--header-txt);
   outline-offset: 1.5px;
 }
+
+.form-field input[type="date"] {
+  box-sizing: border-box;
+  max-width: 100%;
+  /* iOS-specific: prevents the native styling from overflowing */
+  /*some of my feedback was about the calendar overflowing on safari*/
+  -webkit-appearance: none;
+  appearance: none;
+}
+
 
 .booking-form.was-validated input:invalid,
 .booking-form.was-validated select:invalid,

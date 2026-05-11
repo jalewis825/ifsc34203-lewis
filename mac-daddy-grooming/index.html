@@ -21,7 +21,10 @@
       property="og:image"
       content="https://jalewis825.github.io/ifsc34203-lewis/mac-daddy-grooming/assets/img/mac-daddy-logo-1200.jpg"
     />
-    <meta property="og:url" content="https://jalewis825.github.io/ifsc34203-lewis/mac-daddy-grooming/assets/img/mac-daddy-logo-1200.jpg" />
+    <meta
+      property="og:url"
+      content="https://jalewis825.github.io/ifsc34203-lewis/mac-daddy-grooming/assets/img/mac-daddy-logo-1200.jpg"
+    />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Mac Daddy Grooming" />
     <meta
@@ -88,7 +91,9 @@
         />
         <h1 class="visually-hidden">Mac Daddy Grooming</h1>
         <p class="hero-tagline">The most boss pet grooming joint in town!</p>
-        <p>Keepin' your fur babies lookin' real gone since day one</p>
+        <p class="hero-subtagline">
+          Keepin' your fur babies lookin' real sharp since day one
+        </p>
         <div class="hero-buttons">
           <a href="#booking" class="btn-color"> Book Now </a>
           <a href="#services" class="btn-color"> Check out our services </a>
@@ -229,7 +234,8 @@
             <div class="card-body">
               <p class="card-text">
                 Includes all services from The Hot Rod and adds one color of
-                your choice from our color selection.
+                your choice from our selection of pet-safe hair dyes. Ask your
+                groomer about available colors during booking!
               </p>
             </div>
 
@@ -513,7 +519,7 @@
             <div class="card-body">
               <h4 class="card-title">Top Priority</h4>
               <p class="card-text">
-                Safety is a top priority at Mac Daddy Grooming, only second to
+                Safety is a top priority at Mac Daddy Grooming, second only to
                 love. We're all about making your pet feel like the coolest
                 cat in town!
               </p>
@@ -531,7 +537,7 @@
       <div class="container">
         <h2 id="booking-heading" class="heading">Book Your Spot</h2>
         <h3 class="sub-heading">
-          Let's get your furry friend looking' real sharp!
+          Let's get your furry friend lookin' real sharp!
         </h3>
 
         <form class="booking-form">
@@ -702,6 +708,25 @@
             </div>
 
             <div class="form-field form-field-full">
+              <label for="breed">
+                <img
+                  src="assets/img/icons/icon-pet-name-type.svg"
+                  alt=""
+                  width="20"
+                  height="20"
+                  class="form-icon"
+                />
+                Breed or Coat Type
+              </label>
+              <input
+                type="text"
+                id="breed"
+                name="breed"
+                placeholder="e.g., Goldendoodle, longhaired, short coat"
+              />
+            </div>
+
+            <div class="form-field form-field-full">
               <label for="specialRequests">Special Requests or Notes</label>
               <textarea
                 id="specialRequests"
@@ -724,24 +749,41 @@
       </div>
     </section>
 
-    <footer class="site-footer">
+    <footer
+      class="site-footer"
+      itemscope
+      itemtype="https://schema.org/LocalBusiness"
+    >
+      <meta itemprop="priceRange" content="$$" />
+      <meta
+        itemprop="image"
+        content="https://jalewis825.github.io/ifsc34203-lewis/mac-daddy-grooming/assets/img/mac-daddy-logo-1200.jpg"
+      />
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
-            <h4>Mac Daddy's</h4>
-            <p>The hippest pet salon that's the most!</p>
+            <h4 itemprop="name">Mac Daddy's</h4>
+            <p itemprop="slogan">The hippest pet salon that's the most!</p>
           </div>
 
           <div class="footer-hours">
             <h4>Hours</h4>
-            <p>Monday-Friday: 9am - 6pm</p>
-            <p>Saturday: 10am - 4pm</p>
+            <p>
+              <meta
+                itemprop="openingHours"
+                content="Mo-Fr 09:00-18:00"
+              />Monday-Friday: 9am - 6pm
+            </p>
+            <p>
+              <meta itemprop="openingHours" content="Sa 10:00-16:00" />Saturday:
+              10am - 4pm
+            </p>
             <p>Sunday: Closed</p>
           </div>
           <div class="footer-contact">
             <h4>Get in touch</h4>
 
-            <p>
+            <p itemprop="telephone">
               <img
                 src="assets/img/icons/icon-phone.svg"
                 alt=""
@@ -759,9 +801,15 @@
                 height="18"
                 class="footer-icon"
               />
-              <a href="mailto:hello@macdaddys.com">hello@macdaddys.com</a>
+              <a href="mailto:hello@macdaddys.com" itemprop="email"
+                >hello@macdaddys.com</a
+              >
             </p>
-            <p>
+            <p
+              itemprop="address"
+              itemscope
+              itemtype="https://schema.org/PostalAddress"
+            >
               <img
                 src="assets/img/icons/icon-location-pin.svg"
                 alt=""
@@ -773,8 +821,12 @@
                 href="https://www.google.com/maps/dir/?api=1&destination=2801+S+University+Avenue+Little+Rock+AR"
                 target="_blank"
                 rel="noopener noreferrer"
-                >123 Cool Cat Lane</a
+                ><span itemprop="streetAddress">123 Cool Cat Lane</span></a
               >
+              <meta itemprop="addressLocality" content="Little Rock" />
+              <meta itemprop="addressRegion" content="AR" />
+              <meta itemprop="postalCode" content="72204" />
+              <meta itemprop="addressCountry" content="US" />
             </p>
           </div>
         </div>
