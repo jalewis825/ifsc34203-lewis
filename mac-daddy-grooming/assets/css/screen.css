@@ -778,13 +778,13 @@ p.price {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 1.5rem;
   align-items: start;
 }
 
 .footer-brand {
-  grid-column: 1/-1;
+  grid-column: auto;
   text-align: center;
 }
 
@@ -799,11 +799,6 @@ p.price {
 
 .footer-hours {
   text-align: center;
-}
-
-.footer-hours p{
-  white-space: nowrap;
-  font-size: 0.95rem;
 }
 
 .site-footer h4 {
