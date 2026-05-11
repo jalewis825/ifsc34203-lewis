@@ -1,3 +1,11 @@
+/*
+ * AI Tools Statement:
+ * Claude AI was used as a learning aid throughout this project's JavaScript implementation,
+ * including the hamburger menu, carousel, and form validation. All code was reviewed and
+ * adapted by Jessi Lewis.
+ * AI explanations were used to understand syntax and patterns rather than as a copy-paste solution.
+ */
+
 document.documentElement.classList.add("js-enabled");
 
 const navToggle = document.querySelector(".nav-toggle");
@@ -24,7 +32,7 @@ document.addEventListener("click", (event) => {
   closeMenu();
 });
 
-/* ===== BOOKING FORM VALIDATION ===== */
+/*----------Booking Form Validation----------*/
 const bookingForm = document.querySelector(".booking-form");
 
 if (bookingForm) {
@@ -53,7 +61,7 @@ if (bookingForm) {
   });
 }
 
-/* ===== CAROUSEL ===== */
+/*----------Carousel----------*/
 const carousel = document.querySelector(".carousel");
 
 if (carousel) {
@@ -65,8 +73,6 @@ if (carousel) {
 
   let currentIndex = 0;
   const totalSlides = slides.length;
-  const autoRotateDelay = 5000;
-  let autoRotateTimer;
 
   function goToSlide(index) {
     if (index < 0) index = totalSlides - 1;
@@ -80,15 +86,22 @@ if (carousel) {
 
     dots.forEach((dot, i) => {
       dot.classList.toggle("is-active", i === index);
-      dot.setAttribute("aria-selected", i === index ? "true" : "false");
+      if (i === index) {
+        dot.setAttribute("aria-current", "true");
+      } else {
+        dot.removeAttribute("aria-current");
+      }
     });
 
     currentIndex = index;
   }
 
-  function nextSlide() { goToSlide(currentIndex + 1); }
-  function prevSlide() { goToSlide(currentIndex - 1); }
-
+  function nextSlide() {
+    goToSlide(currentIndex + 1);
+  }
+  function prevSlide() {
+    goToSlide(currentIndex - 1);
+  }
 
   nextBtn.addEventListener("click", () => {
     nextSlide();
@@ -103,6 +116,4 @@ if (carousel) {
       goToSlide(i);
     });
   });
-
 }
-
